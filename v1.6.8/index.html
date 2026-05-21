@@ -26,30 +26,7 @@
             ⚙️ Pra atualizar: o Chrome busca a versão nova automaticamente em poucas horas. Se quiser forçar, vá em <code>chrome://extensions</code>, ative "Modo do desenvolvedor" e clique em "Atualizar". Depois clique no botão de Recarregar do card do SupportAssistant.
         </div>
 
-        <!-- ─── Feature 1: CORB fix ─────────────────────────────────── -->
-        <section class="feature">
-            <h2><span class="icon">🛡️</span> Resumo volta a funcionar (CORB resolvido)</h2>
-            <p class="feature-sub">A chamada ao Gemini agora passa pelo service worker da extensão, evitando o bloqueio CORB (Cross-Origin Read Blocking) que aparecia ao clicar em "Resumo".</p>
-
-            <div class="video-wrap">
-                <video src="../assets/videos/resumo-corb-fix.mp4" autoplay muted loop playsinline></video>
-                <div class="video-placeholder" hidden>
-                    <div class="ph-icon">🎬</div>
-                    <div>Vídeo em breve: <code>resumo-corb-fix.mp4</code></div>
-                </div>
-            </div>
-
-            <div class="howto">
-                <h3>Como verificar</h3>
-                <ol>
-                    <li>Abra um atendimento qualquer (ticket ou chat).</li>
-                    <li>Clique em <strong>✨ Resumo</strong>.</li>
-                    <li>O modal deve abrir, gerar o resumo via Gemini e exibir o resultado normalmente. Não deve aparecer aviso de CORB no console.</li>
-                </ol>
-            </div>
-        </section>
-
-        <!-- ─── Feature 2: Abrir Configurações ─────────────────────── -->
+        <!-- ─── Feature 1: Abrir Configurações ─────────────────────── -->
         <section class="feature">
             <h2><span class="icon">⚙️</span> Botão "Abrir Configurações" do modal funcional</h2>
             <p class="feature-sub">Quando sua chave de IA ainda não está configurada, o modal mostra um aviso com um botão "Abrir Configurações". Antes ele não fazia nada; agora abre direto a sub-aba <em>Geral</em> da nova seção <em>Resumo Atendimento</em>.</p>
