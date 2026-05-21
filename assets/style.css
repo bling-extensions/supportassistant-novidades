@@ -220,6 +220,12 @@ a:hover { color: var(--accent); text-decoration: underline; }
     padding: 20px;
     background: linear-gradient(135deg, #1a221d, #0e1411);
 }
+/* O atributo HTML "hidden" precisa vencer a regra acima de display:flex.
+   Sem essa linha, o placeholder fica visível mesmo quando o JS marcou
+   hidden=true (ou seja: quando o vídeo carregou com sucesso). */
+.feature .video-placeholder[hidden] {
+    display: none;
+}
 .feature .video-placeholder .ph-icon {
     font-size: 38px;
     margin-bottom: 8px;
