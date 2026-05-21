@@ -1,0 +1,278 @@
+/* SupportAssistant Novidades - identidade Setra Dev
+   Limpo, mobile-first, verde como acento (alinhado com tema da extensão).
+*/
+
+:root {
+    --bg: #f7f9f7;
+    --bg-card: #ffffff;
+    --fg: #1d2421;
+    --fg-muted: #5a655e;
+    --border: #e1e8e3;
+    --accent: #2f8a4d;
+    --accent-soft: #e7f4ec;
+    --accent-deep: #1e5d33;
+    --shadow: 0 2px 12px rgba(20, 40, 30, 0.06);
+    --radius: 10px;
+    --maxw: 860px;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+    --mono: ui-monospace, "SF Mono", "Cascadia Mono", Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent-deep); text-decoration: none; }
+a:hover { color: var(--accent); text-decoration: underline; }
+
+/* ─── Layout ─────────────────────────────────────────────────────────── */
+.wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 32px 20px 80px;
+}
+
+.site-header {
+    margin-bottom: 28px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--border);
+}
+.site-header .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--fg-muted);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+.site-header .brand .dot {
+    width: 8px; height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+}
+.site-header h1 {
+    margin: 12px 0 6px;
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+.site-header p.lead {
+    margin: 0;
+    color: var(--fg-muted);
+    font-size: 15px;
+    max-width: 60ch;
+}
+
+/* ─── Lista de versões (index.html) ──────────────────────────────────── */
+.versions {
+    display: grid;
+    gap: 14px;
+}
+.version-card {
+    display: block;
+    padding: 18px 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.12s ease, border-color 0.12s ease;
+}
+.version-card:hover {
+    text-decoration: none;
+    border-color: var(--accent);
+    transform: translateY(-1px);
+}
+.version-card .v-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.version-card .v-num {
+    font-family: var(--mono);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--accent-deep);
+}
+.version-card .v-date {
+    color: var(--fg-muted);
+    font-size: 13px;
+}
+.version-card .v-summary {
+    margin: 6px 0 0;
+    color: var(--fg);
+    font-size: 14px;
+}
+.version-card .v-tags {
+    margin-top: 8px;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+.version-card .v-tag {
+    background: var(--accent-soft);
+    color: var(--accent-deep);
+    border-radius: 999px;
+    padding: 2px 10px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* ─── Página de versão ───────────────────────────────────────────────── */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    margin-bottom: 18px;
+    color: var(--fg-muted);
+}
+.back-link:hover { color: var(--accent); text-decoration: none; }
+
+.version-meta {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+}
+.version-meta .v-num-big {
+    font-family: var(--mono);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--accent-deep);
+}
+.version-meta .v-date-big {
+    color: var(--fg-muted);
+    font-size: 14px;
+}
+
+.intro {
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    padding: 14px 16px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 18px 0 36px;
+    color: var(--fg);
+    font-size: 15px;
+}
+
+/* ─── Features ───────────────────────────────────────────────────────── */
+.feature {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+.feature h2 {
+    margin: 0 0 4px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.feature h2 .icon {
+    font-size: 24px;
+    line-height: 1;
+}
+.feature .feature-sub {
+    margin: 0 0 16px;
+    color: var(--fg-muted);
+    font-size: 14px;
+}
+
+.feature .video-wrap {
+    margin: 16px 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: #0e1411;
+    border: 1px solid var(--border);
+    position: relative;
+}
+.feature video {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #0e1411;
+}
+.feature .video-placeholder {
+    aspect-ratio: 16 / 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #b6c3bb;
+    font-size: 14px;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #1a221d, #0e1411);
+}
+.feature .video-placeholder .ph-icon {
+    font-size: 38px;
+    margin-bottom: 8px;
+    opacity: 0.7;
+}
+
+.howto {
+    margin-top: 16px;
+    padding: 14px 16px;
+    background: #f3f6f4;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+.howto h3 {
+    margin: 0 0 6px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--fg-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.howto ol, .howto ul {
+    margin: 6px 0;
+    padding-left: 22px;
+}
+.howto li {
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+.howto code {
+    background: #e1e8e3;
+    color: var(--accent-deep);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-family: var(--mono);
+    font-size: 13px;
+}
+
+.site-footer {
+    margin-top: 60px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+    color: var(--fg-muted);
+    font-size: 13px;
+    text-align: center;
+}
+.site-footer a { color: var(--fg-muted); }
+
+/* ─── Mobile ─────────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+    .wrap { padding: 24px 16px 60px; }
+    .site-header h1 { font-size: 26px; }
+    .feature { padding: 18px; }
+    .feature h2 { font-size: 18px; }
+    .version-meta .v-num-big { font-size: 22px; }
+}

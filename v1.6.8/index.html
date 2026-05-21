@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SupportAssistant v1.6.8: Novidades</title>
+    <meta name="description" content="Hotfixes e melhorias do Resumo do Atendimento, com vídeos explicativos.">
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+    <main class="wrap">
+
+        <a class="back-link" href="../">← Todas as versões</a>
+
+        <header class="site-header">
+            <div class="brand"><span class="dot"></span> SupportAssistant</div>
+            <div class="version-meta">
+                <span class="v-num-big">v1.6.8</span>
+                <span class="v-date-big">21 de maio de 2026</span>
+            </div>
+            <h1>Hotfixes do Resumo do Atendimento</h1>
+            <p class="lead">Ciclo curto de correções e ajustes finos no módulo de Resumo lançado na v1.6.7: a chamada ao Gemini deixou de bater no CORB, o botão "Abrir Configurações" do modal funciona, a inserção como anotação interna sai formatada de verdade, e o botão "✨ Resumo" passa a morar ao lado da aba WOZ.</p>
+        </header>
+
+        <div class="intro">
+            ⚙️ Pra atualizar: o Chrome busca a versão nova automaticamente em poucas horas. Se quiser forçar, vá em <code>chrome://extensions</code>, ative "Modo do desenvolvedor" e clique em "Atualizar". Depois clique no botão de Recarregar do card do SupportAssistant.
+        </div>
+
+        <!-- ─── Feature 1: CORB fix ─────────────────────────────────── -->
+        <section class="feature">
+            <h2><span class="icon">🛡️</span> Resumo volta a funcionar (CORB resolvido)</h2>
+            <p class="feature-sub">A chamada ao Gemini agora passa pelo service worker da extensão, evitando o bloqueio CORB (Cross-Origin Read Blocking) que aparecia ao clicar em "Resumo".</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/resumo-corb-fix.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>resumo-corb-fix.mp4</code></div>
+                </div>
+            </div>
+
+            <div class="howto">
+                <h3>Como verificar</h3>
+                <ol>
+                    <li>Abra um atendimento qualquer (ticket ou chat).</li>
+                    <li>Clique em <strong>✨ Resumo</strong>.</li>
+                    <li>O modal deve abrir, gerar o resumo via Gemini e exibir o resultado normalmente. Não deve aparecer aviso de CORB no console.</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ─── Feature 2: Abrir Configurações ─────────────────────── -->
+        <section class="feature">
+            <h2><span class="icon">⚙️</span> Botão "Abrir Configurações" do modal funcional</h2>
+            <p class="feature-sub">Quando sua chave de IA ainda não está configurada, o modal mostra um aviso com um botão "Abrir Configurações". Antes ele não fazia nada; agora abre direto a sub-aba <em>Geral</em> da nova seção <em>Resumo Atendimento</em>.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/abrir-configuracoes.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>abrir-configuracoes.mp4</code></div>
+                </div>
+            </div>
+
+            <div class="howto">
+                <h3>Como usar</h3>
+                <ol>
+                    <li>Sem chave configurada, clique em <strong>✨ Resumo</strong>.</li>
+                    <li>Aparece o aviso 🔑 "Sua chave de IA não está configurada".</li>
+                    <li>Clique em <strong>Abrir Configurações</strong>: uma nova aba abre direto em <code>Configurações &gt; Resumo Atendimento &gt; Geral</code>.</li>
+                    <li>Cole sua chave (gere uma gratuita em <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">aistudio.google.com/apikey</a>) e clique em Salvar.</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ─── Feature 3: Anotação interna formatada ──────────────── -->
+        <section class="feature">
+            <h2><span class="icon">📌</span> Anotação interna entra formatada de verdade</h2>
+            <p class="feature-sub">No chat, ao gerar um resumo e clicar em "Inserir como anotação interna", o texto agora entra com <strong>negrito</strong> e <em>itálico</em> reais no editor, em vez do markdown bruto com <code>**asteriscos**</code> visíveis.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/anotacao-interna-formatada.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>anotacao-interna-formatada.mp4</code></div>
+                </div>
+            </div>
+
+            <div class="howto">
+                <h3>Como usar</h3>
+                <ol>
+                    <li>Em um atendimento do chat, clique em <strong>✨ Resumo</strong>.</li>
+                    <li>Espere o resumo carregar no modal.</li>
+                    <li>Clique em <strong>📌 Inserir como anotação interna</strong>.</li>
+                    <li>O editor da aba "Anotações internas" recebe o texto já formatado, pronto pra salvar.</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ─── Feature 4: Botão ao lado da aba WOZ ────────────────── -->
+        <section class="feature">
+            <h2><span class="icon">📍</span> "✨ Resumo" ao lado da aba WOZ</h2>
+            <p class="feature-sub">O botão <strong>✨ Resumo</strong> saiu da toolbar inferior e foi pra nav superior do editor de mensagem, encostado na aba <strong>WOZ</strong>. Fica mais à mão e libera espaço no rodapé.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/botao-resumo-nav.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>botao-resumo-nav.mp4</code></div>
+                </div>
+            </div>
+
+            <div class="howto">
+                <h3>Onde encontrar</h3>
+                <ul>
+                    <li>Abra qualquer atendimento do chat.</li>
+                    <li>Veja a nav superior do editor de mensagem: <code>Mensagem | Anotações internas | WOZ | ✨ Resumo</code>.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ─── Feature 5: Crédito Guilherme Anjolim ───────────────── -->
+        <section class="feature">
+            <h2><span class="icon">🙌</span> Hall da Contribuição: Guilherme Anjolim</h2>
+            <p class="feature-sub">O botão <strong>✨ Resumo</strong> foi ideia do Guilherme Anjolim. Crédito registrado em <code>Configurações &gt; Avisos &gt; Hall da contribuição &gt; Ideias aplicadas</code>.</p>
+
+            <div class="howto">
+                <h3>Como conferir</h3>
+                <ol>
+                    <li>Abra as configurações da extensão.</li>
+                    <li>Vá em <strong>Avisos</strong> na lateral.</li>
+                    <li>Expanda o card <strong>💡 Ideias aplicadas</strong>: o crédito aparece como primeiro item da lista.</li>
+                </ol>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            Desenvolvido por <a href="https://setradev.com" target="_blank" rel="noopener">Setra Dev</a> · <a href="../">Todas as versões</a>
+        </footer>
+
+    </main>
+
+    <!-- ─── Script: troca vídeo por placeholder se arquivo não existir ── -->
+    <script>
+        // Quando o MP4 ainda não foi gravado, o <video> falha no carregamento.
+        // Esse handler troca o vídeo pelo placeholder "🎬 Vídeo em breve" sem
+        // quebrar o layout da página.
+        document.querySelectorAll('.feature .video-wrap').forEach(function (wrap) {
+            var video = wrap.querySelector('video');
+            var placeholder = wrap.querySelector('.video-placeholder');
+            if (!video || !placeholder) return;
+
+            function trocarParaPlaceholder() {
+                video.style.display = 'none';
+                placeholder.hidden = false;
+            }
+
+            video.addEventListener('error', trocarParaPlaceholder);
+            // Alguns browsers não disparam 'error' quando o arquivo dá 404 num
+            // <source> implícito. Fallback: se depois de 800ms o readyState
+            // ainda for 0 (HAVE_NOTHING), assumimos que falhou.
+            setTimeout(function () {
+                if (video.readyState === 0 && video.networkState >= 3) {
+                    trocarParaPlaceholder();
+                }
+            }, 800);
+        });
+    </script>
+</body>
+</html>
