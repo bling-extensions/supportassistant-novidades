@@ -26,21 +26,147 @@
             ⚙️ Pra atualizar: o Chrome busca a versão nova automaticamente em poucas horas. Se quiser forçar, vá em <code>chrome://extensions</code>, ative "Modo do desenvolvedor" e clique em "Atualizar". Depois clique no botão de Recarregar do card do SupportAssistant.
         </div>
 
-        <section class="changelog">
-            <h2>O que mudou nessa versão</h2>
-            <ul class="changes">
-                <li><span class="tag-mod">Botão Flutuante</span>Etiquetas laterais no painel (estilo &#39;abas de Bíblia&#39;) projetadas para fora da borda interna, com 3 abas: Principal (verde), Fiscal (amarelo trigo) e Tickets (azul céu). Mudam de lado automaticamente conforme o painel está encostado à esquerda ou direita da tela.</li>
-                <li><span class="tag-mod">Botão Flutuante &gt; Tickets</span>Nova aba &#39;Tickets&#39; com gerenciador de pastas e links em árvore: crie pastas e subpastas, adicione tickets como links clicáveis (abrem em nova aba). Quando você está com um ticket aberto, o formulário &#39;Novo Ticket&#39; é pré-preenchido automaticamente com o número e a URL.</li>
-                <li><span class="tag-mod">Configurações &gt; Pasta de Tickets</span>Novo item no menu lateral com o mesmo gerenciador do botão flutuante. Qualquer alteração feita aqui ou no botão flutuante é sincronizada em tempo real entre os dois.</li>
-                <li><span class="tag-mod">Configurações &gt; Pasta de Tickets &gt; Backup</span>Sub-aba &#39;Backup&#39; para exportar (gera JSON com nome timestampado) e importar (modo &#39;Mesclar&#39; deduplicando por nome de pasta e URL de ticket no mesmo nível, ou &#39;Substituir tudo&#39; com confirmação).</li>
-                <li><span class="tag-mod">Configurações &gt; Perfil &gt; Armazenamento Local</span>Nova categoria &#39;Pastas de Tickets&#39; no detalhamento, com botão &#39;i&#39; que abre direto a aba de gestão.</li>
-                <li><span class="tag-mod">Short Text</span>Nova variável mágica [IDTicket]: ao expandir um atalho dentro de um ticket aberto, é substituída pelo ID numérico do ticket atual. Card &#39;Apenas no Tickets&#39; adicionado no aside &#39;Variáveis Mágicas&#39; (reordenado para Em todos &gt; Tickets &gt; Chat).</li>
-                <li><span class="tag-mod">Short Text</span>Correção: atalhos com espaço no gatilho (ex: &#39;não responde&#39;) substituíam apenas a última palavra ao serem selecionados pelo balão, deixando o início do gatilho intacto. Agora o cálculo de quantos caracteres apagar usa o maior prefixo do gatilho que casa com o final do texto digitado.</li>
-                <li><span class="tag-mod">Configurações &gt; Avisos</span>Cards &#39;Ideias aplicadas&#39; e &#39;Caçadores de Bugs&#39; do Hall da Contribuição agora colapsáveis (fechados por padrão, expandem ao clicar).</li>
-                <li><span class="tag-mod">Configurações &gt; Avisos</span>Eduardo Sottili adicionado em &#39;Ideias aplicadas&#39; (sugestão da variável [IDTicket]). Deise Kayser adicionada em &#39;Caçadores de Bugs&#39; (bug do gatilho com espaço no balão).</li>
-                <li><span class="tag-mod">Roadmap &gt; Horizonte futuro</span>Dois novos cards: &#39;Integração com Controle Tickets - L2&#39; (fusão das ferramentas L2 no Support Assistant) e &#39;Controle de permissões de módulos via OAuth&#39; (perfis L1/L2/Supervisor liberando ou restringindo módulos).</li>
-                <li><span class="tag-mod">Padronização visual</span>Padrão de cores fixo para botões de ação adotado em todo o projeto: Verde (confirmar/salvar), Cinza (cancelar/editar), Vermelho (excluir/remover). Documentado no CLAUDE.md do projeto. Botões de cancelar e remover dos atalhos do Short Text corrigidos (estavam com cores trocadas). Ícones ✎/🗑 da árvore de tickets (config e botão flutuante) trocados por SVGs com hover na cor da intenção.</li>
-            </ul>
+        <section class="feature">
+            <h2><span class="icon">🎯</span> Botão Flutuante</h2>
+            <p class="feature-sub">Etiquetas laterais no painel (estilo &#39;abas de Bíblia&#39;) projetadas para fora da borda interna, com 3 abas: Principal (verde), Fiscal (amarelo trigo) e Tickets (azul céu). Mudam de lado automaticamente conforme o painel está encostado à esquerda ou direita da tela.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.6-01-etiquetas-laterais-painel-estilo.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.6-01-etiquetas-laterais-painel-estilo.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">🎯</span> Botão Flutuante &gt; Tickets</h2>
+            <p class="feature-sub">Nova aba &#39;Tickets&#39; com gerenciador de pastas e links em árvore: crie pastas e subpastas, adicione tickets como links clicáveis (abrem em nova aba). Quando você está com um ticket aberto, o formulário &#39;Novo Ticket&#39; é pré-preenchido automaticamente com o número e a URL.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.6-02-aba-tickets-gerenciador-pastas.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.6-02-aba-tickets-gerenciador-pastas.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⚙️</span> Configurações &gt; Pasta de Tickets</h2>
+            <p class="feature-sub">Novo item no menu lateral com o mesmo gerenciador do botão flutuante. Qualquer alteração feita aqui ou no botão flutuante é sincronizada em tempo real entre os dois.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.6-03-item-menu-lateral-mesmo.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.6-03-item-menu-lateral-mesmo.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⚙️</span> Configurações &gt; Pasta de Tickets &gt; Backup</h2>
+            <p class="feature-sub">Sub-aba &#39;Backup&#39; para exportar (gera JSON com nome timestampado) e importar (modo &#39;Mesclar&#39; deduplicando por nome de pasta e URL de ticket no mesmo nível, ou &#39;Substituir tudo&#39; com confirmação).</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.6-04-sub-aba-backup-exportar-gera.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.6-04-sub-aba-backup-exportar-gera.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⚙️</span> Configurações &gt; Perfil &gt; Armazenamento Local</h2>
+            <p class="feature-sub">Nova categoria &#39;Pastas de Tickets&#39; no detalhamento, com botão &#39;i&#39; que abre direto a aba de gestão.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.6-05-categoria-pastas-tickets-detalhamento.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.6-05-categoria-pastas-tickets-detalhamento.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⌨️</span> Short Text</h2>
+            <p class="feature-sub">Nova variável mágica [IDTicket]: ao expandir um atalho dentro de um ticket aberto, é substituída pelo ID numérico do ticket atual. Card &#39;Apenas no Tickets&#39; adicionado no aside &#39;Variáveis Mágicas&#39; (reordenado para Em todos &gt; Tickets &gt; Chat).</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.6-06-variavel-magica-expandir-atalho.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.6-06-variavel-magica-expandir-atalho.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⌨️</span> Short Text</h2>
+            <p class="feature-sub">Correção: atalhos com espaço no gatilho (ex: &#39;não responde&#39;) substituíam apenas a última palavra ao serem selecionados pelo balão, deixando o início do gatilho intacto. Agora o cálculo de quantos caracteres apagar usa o maior prefixo do gatilho que casa com o final do texto digitado.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.6-07-correcao-atalhos-espaco-gatilho.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.6-07-correcao-atalhos-espaco-gatilho.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⚙️</span> Configurações &gt; Avisos</h2>
+            <p class="feature-sub">Cards &#39;Ideias aplicadas&#39; e &#39;Caçadores de Bugs&#39; do Hall da Contribuição agora colapsáveis (fechados por padrão, expandem ao clicar).</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.6-08-cards-ideias-aplicadas-cacadores.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.6-08-cards-ideias-aplicadas-cacadores.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⚙️</span> Configurações &gt; Avisos</h2>
+            <p class="feature-sub">Eduardo Sottili adicionado em &#39;Ideias aplicadas&#39; (sugestão da variável [IDTicket]). Deise Kayser adicionada em &#39;Caçadores de Bugs&#39; (bug do gatilho com espaço no balão).</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.6-09-eduardo-sottili-adicionado-ideias.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.6-09-eduardo-sottili-adicionado-ideias.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">🗺️</span> Roadmap &gt; Horizonte futuro</h2>
+            <p class="feature-sub">Dois novos cards: &#39;Integração com Controle Tickets - L2&#39; (fusão das ferramentas L2 no Support Assistant) e &#39;Controle de permissões de módulos via OAuth&#39; (perfis L1/L2/Supervisor liberando ou restringindo módulos).</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.6-10-dois-cards-integracao-controle.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.6-10-dois-cards-integracao-controle.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">🎨</span> Padronização visual</h2>
+            <p class="feature-sub">Padrão de cores fixo para botões de ação adotado em todo o projeto: Verde (confirmar/salvar), Cinza (cancelar/editar), Vermelho (excluir/remover). Documentado no CLAUDE.md do projeto. Botões de cancelar e remover dos atalhos do Short Text corrigidos (estavam com cores trocadas). Ícones ✎/🗑 da árvore de tickets (config e botão flutuante) trocados por SVGs com hover na cor da intenção.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.6-11-padrao-cores-fixo-botoes.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.6-11-padrao-cores-fixo-botoes.mp4</code></div>
+                </div>
+            </div>
         </section>
 
         <footer class="site-footer">
@@ -48,5 +174,32 @@
         </footer>
 
     </main>
+
+    <!-- ─── Script: troca vídeo por placeholder se arquivo não existir ── -->
+    <script>
+        // Quando o MP4 ainda não foi gravado, o <video> falha no carregamento.
+        // Esse handler troca o vídeo pelo placeholder "🎬 Vídeo em breve" sem
+        // quebrar o layout da página.
+        document.querySelectorAll('.feature .video-wrap').forEach(function (wrap) {
+            var video = wrap.querySelector('video');
+            var placeholder = wrap.querySelector('.video-placeholder');
+            if (!video || !placeholder) return;
+
+            function trocarParaPlaceholder() {
+                video.style.display = 'none';
+                placeholder.hidden = false;
+            }
+
+            video.addEventListener('error', trocarParaPlaceholder);
+            // Alguns browsers não disparam 'error' quando o arquivo dá 404 num
+            // <source> implícito. Fallback: se depois de 800ms o readyState
+            // ainda for 0 (HAVE_NOTHING), assumimos que falhou.
+            setTimeout(function () {
+                if (video.readyState === 0 && video.networkState >= 3) {
+                    trocarParaPlaceholder();
+                }
+            }, 800);
+        });
+    </script>
 </body>
 </html>

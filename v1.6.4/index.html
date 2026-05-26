@@ -26,23 +26,173 @@
             ⚙️ Pra atualizar: o Chrome busca a versão nova automaticamente em poucas horas. Se quiser forçar, vá em <code>chrome://extensions</code>, ative "Modo do desenvolvedor" e clique em "Atualizar". Depois clique no botão de Recarregar do card do SupportAssistant.
         </div>
 
-        <section class="changelog">
-            <h2>O que mudou nessa versão</h2>
-            <ul class="changes">
-                <li><span class="tag-mod">Configurações &gt; Short Text &gt; Atalhos</span>Card lateral &#39;Variáveis Mágicas&#39;: lista clicável das tags disponíveis (Chat e Todos) com link direto para o Perfil.</li>
-                <li><span class="tag-mod">Tema Escuro</span>Reformulado: fundo grafite, texto branco/cinza claro, verde apenas em acentos. Aplicado em configurações, botão flutuante, popup do Short Text e seletor de emojis.</li>
-                <li><span class="tag-mod">Botão Flutuante</span>Correção: header do painel não atualizava ao trocar de tema.</li>
-                <li><span class="tag-mod">Botão Flutuante</span>Modal &#39;Substituição aplicada&#39; do bulk transform agora respeita o tema (banner verde escurecido, textos brancos no escuro).</li>
-                <li><span class="tag-mod">Short Text</span>Cole formatado: ao colar texto rico (do editor do chat) num campo de atalho, o conteúdo HTML é convertido automaticamente para markdown (**negrito**, *itálico*, [link](url), ~~tachado~~).</li>
-                <li><span class="tag-mod">Short Text &gt; Importação</span>Nova seção &#39;Importação externa&#39; com botões &#39;Importar JSON: Magical&#39; e &#39;Importar CSV: Web TextExpander&#39;.</li>
-                <li><span class="tag-mod">Short Text &gt; Importação</span>Modal &#39;Como gerar os arquivos de exportação&#39; com instruções passo a passo e scripts prontos com botão Copiar.</li>
-                <li><span class="tag-mod">Short Text &gt; Importação</span>Script de extração da Magical converte HTML rico para markdown preservando negrito, itálico, links, listas e quebras de linha. Arquivo gerado: SupportAssistant-extract-magical.json.</li>
-                <li><span class="tag-mod">Short Text &gt; Importação</span>Modos &#39;Excluir atuais&#39;, &#39;Substituir existentes&#39; e &#39;Apenas adicionar&#39; agora compartilhados entre todos os fluxos (CSV padrão, Magical, Web TextExpander). Card &#39;Modo de importação&#39; isolado no topo da aba.</li>
-                <li><span class="tag-mod">Short Text &gt; Importação</span>Modo &#39;Substituir existentes&#39; abre modal com diff antes/depois para selecionar individualmente os conflitos a sobrescrever (com &#39;Selecionar todos&#39; / &#39;Limpar seleção&#39;). Atalhos sem conflito são adicionados normalmente.</li>
-                <li><span class="tag-mod">Short Text &gt; Atalhos</span>Validação anti-duplicata ao salvar atalho: gatilho repetido bloqueia o salvamento com dica em vermelho. Comparação case-insensitive (&#39;feliz&#39; e &#39;Feliz&#39; são o mesmo).</li>
-                <li><span class="tag-mod">Configurações &gt; Perfil</span>Novo card &#39;Armazenamento Local&#39;: barra de uso com cores dinâmicas (verde até 60%, amarelo 60-85%, vermelho 85%+) e detalhamento colapsável. Atualiza automaticamente quando o storage muda.</li>
-                <li><span class="tag-mod">Configurações &gt; Guia de Uso</span>Descrição dos 4 temas atualizada (Claro, Escuro, Verde, Azul). Links &#39;(definido no Perfil)&#39; nas Variáveis Mágicas levam direto para a aba Perfil.</li>
-            </ul>
+        <section class="feature">
+            <h2><span class="icon">⚙️</span> Configurações &gt; Short Text &gt; Atalhos</h2>
+            <p class="feature-sub">Card lateral &#39;Variáveis Mágicas&#39;: lista clicável das tags disponíveis (Chat e Todos) com link direto para o Perfil.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.4-01-card-lateral-variaveis-magicas.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.4-01-card-lateral-variaveis-magicas.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">🎨</span> Tema Escuro</h2>
+            <p class="feature-sub">Reformulado: fundo grafite, texto branco/cinza claro, verde apenas em acentos. Aplicado em configurações, botão flutuante, popup do Short Text e seletor de emojis.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.4-02-reformulado-fundo-grafite-texto.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.4-02-reformulado-fundo-grafite-texto.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">🎯</span> Botão Flutuante</h2>
+            <p class="feature-sub">Correção: header do painel não atualizava ao trocar de tema.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.4-03-correcao-header-painel-atualizava.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.4-03-correcao-header-painel-atualizava.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">🎯</span> Botão Flutuante</h2>
+            <p class="feature-sub">Modal &#39;Substituição aplicada&#39; do bulk transform agora respeita o tema (banner verde escurecido, textos brancos no escuro).</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.4-04-modal-substituicao-aplicada-bulk.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.4-04-modal-substituicao-aplicada-bulk.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⌨️</span> Short Text</h2>
+            <p class="feature-sub">Cole formatado: ao colar texto rico (do editor do chat) num campo de atalho, o conteúdo HTML é convertido automaticamente para markdown (**negrito**, *itálico*, [link](url), ~~tachado~~).</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.4-05-cole-formatado-colar-texto.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.4-05-cole-formatado-colar-texto.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⌨️</span> Short Text &gt; Importação</h2>
+            <p class="feature-sub">Nova seção &#39;Importação externa&#39; com botões &#39;Importar JSON: Magical&#39; e &#39;Importar CSV: Web TextExpander&#39;.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.4-06-secao-importacao-externa-botoes.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.4-06-secao-importacao-externa-botoes.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⌨️</span> Short Text &gt; Importação</h2>
+            <p class="feature-sub">Modal &#39;Como gerar os arquivos de exportação&#39; com instruções passo a passo e scripts prontos com botão Copiar.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.4-07-modal-gerar-arquivos-exportacao.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.4-07-modal-gerar-arquivos-exportacao.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⌨️</span> Short Text &gt; Importação</h2>
+            <p class="feature-sub">Script de extração da Magical converte HTML rico para markdown preservando negrito, itálico, links, listas e quebras de linha. Arquivo gerado: SupportAssistant-extract-magical.json.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.4-08-script-extracao-magical-converte.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.4-08-script-extracao-magical-converte.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⌨️</span> Short Text &gt; Importação</h2>
+            <p class="feature-sub">Modos &#39;Excluir atuais&#39;, &#39;Substituir existentes&#39; e &#39;Apenas adicionar&#39; agora compartilhados entre todos os fluxos (CSV padrão, Magical, Web TextExpander). Card &#39;Modo de importação&#39; isolado no topo da aba.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.4-09-modos-excluir-atuais-substituir.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.4-09-modos-excluir-atuais-substituir.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⌨️</span> Short Text &gt; Importação</h2>
+            <p class="feature-sub">Modo &#39;Substituir existentes&#39; abre modal com diff antes/depois para selecionar individualmente os conflitos a sobrescrever (com &#39;Selecionar todos&#39; / &#39;Limpar seleção&#39;). Atalhos sem conflito são adicionados normalmente.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.4-10-modo-substituir-existentes-abre.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.4-10-modo-substituir-existentes-abre.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⌨️</span> Short Text &gt; Atalhos</h2>
+            <p class="feature-sub">Validação anti-duplicata ao salvar atalho: gatilho repetido bloqueia o salvamento com dica em vermelho. Comparação case-insensitive (&#39;feliz&#39; e &#39;Feliz&#39; são o mesmo).</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.4-11-validacao-anti-duplicata-salvar-atalho.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.4-11-validacao-anti-duplicata-salvar-atalho.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⚙️</span> Configurações &gt; Perfil</h2>
+            <p class="feature-sub">Novo card &#39;Armazenamento Local&#39;: barra de uso com cores dinâmicas (verde até 60%, amarelo 60-85%, vermelho 85%+) e detalhamento colapsável. Atualiza automaticamente quando o storage muda.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.4-12-card-armazenamento-local-barra.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.4-12-card-armazenamento-local-barra.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⚙️</span> Configurações &gt; Guia de Uso</h2>
+            <p class="feature-sub">Descrição dos 4 temas atualizada (Claro, Escuro, Verde, Azul). Links &#39;(definido no Perfil)&#39; nas Variáveis Mágicas levam direto para a aba Perfil.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.4-13-descricao-temas-atualizada-claro.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.4-13-descricao-temas-atualizada-claro.mp4</code></div>
+                </div>
+            </div>
         </section>
 
         <footer class="site-footer">
@@ -50,5 +200,32 @@
         </footer>
 
     </main>
+
+    <!-- ─── Script: troca vídeo por placeholder se arquivo não existir ── -->
+    <script>
+        // Quando o MP4 ainda não foi gravado, o <video> falha no carregamento.
+        // Esse handler troca o vídeo pelo placeholder "🎬 Vídeo em breve" sem
+        // quebrar o layout da página.
+        document.querySelectorAll('.feature .video-wrap').forEach(function (wrap) {
+            var video = wrap.querySelector('video');
+            var placeholder = wrap.querySelector('.video-placeholder');
+            if (!video || !placeholder) return;
+
+            function trocarParaPlaceholder() {
+                video.style.display = 'none';
+                placeholder.hidden = false;
+            }
+
+            video.addEventListener('error', trocarParaPlaceholder);
+            // Alguns browsers não disparam 'error' quando o arquivo dá 404 num
+            // <source> implícito. Fallback: se depois de 800ms o readyState
+            // ainda for 0 (HAVE_NOTHING), assumimos que falhou.
+            setTimeout(function () {
+                if (video.readyState === 0 && video.networkState >= 3) {
+                    trocarParaPlaceholder();
+                }
+            }, 800);
+        });
+    </script>
 </body>
 </html>

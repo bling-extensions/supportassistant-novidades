@@ -26,19 +26,121 @@
             ⚙️ Pra atualizar: o Chrome busca a versão nova automaticamente em poucas horas. Se quiser forçar, vá em <code>chrome://extensions</code>, ative "Modo do desenvolvedor" e clique em "Atualizar". Depois clique no botão de Recarregar do card do SupportAssistant.
         </div>
 
-        <section class="changelog">
-            <h2>O que mudou nessa versão</h2>
-            <ul class="changes">
-                <li><span class="tag-mod">Tickets</span>Novo &#39;Rascunho Automático&#39;: preserva texto digitado no campo de resposta mesmo após F5, fechar a aba, fechar o navegador ou reiniciar o computador. Restauração silenciosa ao reabrir o ticket.</li>
-                <li><span class="tag-mod">Tickets</span>Rascunho cifrado com AES-GCM antes de ir para chrome.storage.local. Cada ticket tem rascunho próprio, identificado por número visível + ID da URL.</li>
-                <li><span class="tag-mod">Tickets</span>Apaga sozinho ao enviar a mensagem (apenas após confirmação do envio), ao clicar em &#39;Limpar&#39; do sistema de tickets, ou após 1 hora sem edição.</li>
-                <li><span class="tag-mod">Configurações &gt; Ticket &gt; Formatação de Respostas</span>Novo card &#39;Rascunho Automático&#39; com toggle para preservar/desativar e select &#39;Exibir rascunhos no botão flutuante&#39; (Ocultar quando não houver / Sempre exibir / Nunca exibir). Ao desligar o toggle, todos os rascunhos existentes são apagados.</li>
-                <li><span class="tag-mod">Botão Flutuante</span>Nova seção &#39;Rascunhos preservados&#39; entre &#39;Últimos dados extraídos&#39; e &#39;Atalhos recentes&#39;: lista colapsável (fechada por padrão) com os tickets que têm rascunho salvo. Cada item linka pro ticket em nova aba. Atualiza em tempo real conforme rascunhos são criados ou apagados.</li>
-                <li><span class="tag-mod">Configurações &gt; Perfil &gt; Armazenamento Local</span>Nova categoria &#39;Rascunhos de Tickets&#39; no detalhamento, com botão &#39;i&#39; que abre modal listando os tickets com rascunho preservado e link direto para cada um.</li>
-                <li><span class="tag-mod">Short Text</span>Nova variável mágica [IDTicket]: ao expandir o atalho dentro de um ticket aberto, é substituída pelo ID numérico do ticket atual. Permite montar links livremente (ex: suporte.php#edit/[IDTicket] para encaminhar a um colega, tickets.php#/edit/[IDTicket] para o cliente).</li>
-                <li><span class="tag-mod">Configurações &gt; Short Text &gt; Atalhos</span>Card &#39;Variáveis Mágicas&#39; lateral: nova categoria &#39;Apenas no Tickets&#39; (com [IDTicket]) e reordenação dos cards para &#39;Em todos os lugares&#39; &gt; &#39;Apenas no Tickets&#39; &gt; &#39;Apenas no Chat&#39;.</li>
-                <li><span class="tag-mod">Configurações &gt; Short Text</span>Correção: card &#39;Modo de Disparo dos Atalhos&#39; não corta mais as opções (Inteligente, Automático, Manual) por causa do limite de altura do container.</li>
-            </ul>
+        <section class="feature">
+            <h2><span class="icon">🎫</span> Tickets</h2>
+            <p class="feature-sub">Novo &#39;Rascunho Automático&#39;: preserva texto digitado no campo de resposta mesmo após F5, fechar a aba, fechar o navegador ou reiniciar o computador. Restauração silenciosa ao reabrir o ticket.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.5-01-rascunho-automatico-preserva-texto.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.5-01-rascunho-automatico-preserva-texto.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">🎫</span> Tickets</h2>
+            <p class="feature-sub">Rascunho cifrado com AES-GCM antes de ir para chrome.storage.local. Cada ticket tem rascunho próprio, identificado por número visível + ID da URL.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.5-02-rascunho-cifrado-aes-gcm-antes.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.5-02-rascunho-cifrado-aes-gcm-antes.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">🎫</span> Tickets</h2>
+            <p class="feature-sub">Apaga sozinho ao enviar a mensagem (apenas após confirmação do envio), ao clicar em &#39;Limpar&#39; do sistema de tickets, ou após 1 hora sem edição.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.5-03-apaga-sozinho-enviar-mensagem.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.5-03-apaga-sozinho-enviar-mensagem.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⚙️</span> Configurações &gt; Ticket &gt; Formatação de Respostas</h2>
+            <p class="feature-sub">Novo card &#39;Rascunho Automático&#39; com toggle para preservar/desativar e select &#39;Exibir rascunhos no botão flutuante&#39; (Ocultar quando não houver / Sempre exibir / Nunca exibir). Ao desligar o toggle, todos os rascunhos existentes são apagados.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.5-04-card-rascunho-automatico-toggle.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.5-04-card-rascunho-automatico-toggle.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">🎯</span> Botão Flutuante</h2>
+            <p class="feature-sub">Nova seção &#39;Rascunhos preservados&#39; entre &#39;Últimos dados extraídos&#39; e &#39;Atalhos recentes&#39;: lista colapsável (fechada por padrão) com os tickets que têm rascunho salvo. Cada item linka pro ticket em nova aba. Atualiza em tempo real conforme rascunhos são criados ou apagados.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.5-05-secao-rascunhos-preservados-ultimos.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.5-05-secao-rascunhos-preservados-ultimos.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⚙️</span> Configurações &gt; Perfil &gt; Armazenamento Local</h2>
+            <p class="feature-sub">Nova categoria &#39;Rascunhos de Tickets&#39; no detalhamento, com botão &#39;i&#39; que abre modal listando os tickets com rascunho preservado e link direto para cada um.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.5-06-categoria-rascunhos-tickets-detalhamento.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.5-06-categoria-rascunhos-tickets-detalhamento.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⌨️</span> Short Text</h2>
+            <p class="feature-sub">Nova variável mágica [IDTicket]: ao expandir o atalho dentro de um ticket aberto, é substituída pelo ID numérico do ticket atual. Permite montar links livremente (ex: suporte.php#edit/[IDTicket] para encaminhar a um colega, tickets.php#/edit/[IDTicket] para o cliente).</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.5-07-variavel-magica-expandir-atalho.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.5-07-variavel-magica-expandir-atalho.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⚙️</span> Configurações &gt; Short Text &gt; Atalhos</h2>
+            <p class="feature-sub">Card &#39;Variáveis Mágicas&#39; lateral: nova categoria &#39;Apenas no Tickets&#39; (com [IDTicket]) e reordenação dos cards para &#39;Em todos os lugares&#39; &gt; &#39;Apenas no Tickets&#39; &gt; &#39;Apenas no Chat&#39;.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.5-08-card-variaveis-magicas-lateral.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.5-08-card-variaveis-magicas-lateral.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⚙️</span> Configurações &gt; Short Text</h2>
+            <p class="feature-sub">Correção: card &#39;Modo de Disparo dos Atalhos&#39; não corta mais as opções (Inteligente, Automático, Manual) por causa do limite de altura do container.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.5-09-correcao-card-modo-disparo.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.5-09-correcao-card-modo-disparo.mp4</code></div>
+                </div>
+            </div>
         </section>
 
         <footer class="site-footer">
@@ -46,5 +148,32 @@
         </footer>
 
     </main>
+
+    <!-- ─── Script: troca vídeo por placeholder se arquivo não existir ── -->
+    <script>
+        // Quando o MP4 ainda não foi gravado, o <video> falha no carregamento.
+        // Esse handler troca o vídeo pelo placeholder "🎬 Vídeo em breve" sem
+        // quebrar o layout da página.
+        document.querySelectorAll('.feature .video-wrap').forEach(function (wrap) {
+            var video = wrap.querySelector('video');
+            var placeholder = wrap.querySelector('.video-placeholder');
+            if (!video || !placeholder) return;
+
+            function trocarParaPlaceholder() {
+                video.style.display = 'none';
+                placeholder.hidden = false;
+            }
+
+            video.addEventListener('error', trocarParaPlaceholder);
+            // Alguns browsers não disparam 'error' quando o arquivo dá 404 num
+            // <source> implícito. Fallback: se depois de 800ms o readyState
+            // ainda for 0 (HAVE_NOTHING), assumimos que falhou.
+            setTimeout(function () {
+                if (video.readyState === 0 && video.networkState >= 3) {
+                    trocarParaPlaceholder();
+                }
+            }, 800);
+        });
+    </script>
 </body>
 </html>

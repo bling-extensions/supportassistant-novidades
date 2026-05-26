@@ -26,13 +26,43 @@
             ⚙️ Pra atualizar: o Chrome busca a versão nova automaticamente em poucas horas. Se quiser forçar, vá em <code>chrome://extensions</code>, ative "Modo do desenvolvedor" e clique em "Atualizar". Depois clique no botão de Recarregar do card do SupportAssistant.
         </div>
 
-        <section class="changelog">
-            <h2>O que mudou nessa versão</h2>
-            <ul class="changes">
-                <li><span class="tag-mod">Short Text</span>Correção: atalhos com formatação envolvendo todo o conteúdo em uma única tag (ex: &lt;b&gt;texto&lt;/b&gt; sem nada fora) não aplicavam negrito/itálico no chat. O editor descartava marcas inline isoladas; agora a inserção é tratada para preservar a formatação.</li>
-                <li><span class="tag-mod">Short Text</span>Novas variáveis mágicas conectadas ao Perfil do Analista: [L1] (Nome do Analista), [L2] (L2 Responsável), [Supervisor] (Supervisor Responsável) e [ParPausa] (Par de Pausa do Chat). Os valores são lidos de Configurações &gt; Perfil &gt; Dados do Analista e atualizam em tempo real quando você altera os campos.</li>
-                <li><span class="tag-mod">Configurações</span>Campo &#39;Par de Pausa&#39; renomeado para &#39;Par de Pausa (Chat)&#39; para deixar claro o contexto.</li>
-            </ul>
+        <section class="feature">
+            <h2><span class="icon">⌨️</span> Short Text</h2>
+            <p class="feature-sub">Correção: atalhos com formatação envolvendo todo o conteúdo em uma única tag (ex: &lt;b&gt;texto&lt;/b&gt; sem nada fora) não aplicavam negrito/itálico no chat. O editor descartava marcas inline isoladas; agora a inserção é tratada para preservar a formatação.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.3-01-correcao-atalhos-formatacao-envolvendo.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.3-01-correcao-atalhos-formatacao-envolvendo.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⌨️</span> Short Text</h2>
+            <p class="feature-sub">Novas variáveis mágicas conectadas ao Perfil do Analista: [L1] (Nome do Analista), [L2] (L2 Responsável), [Supervisor] (Supervisor Responsável) e [ParPausa] (Par de Pausa do Chat). Os valores são lidos de Configurações &gt; Perfil &gt; Dados do Analista e atualizam em tempo real quando você altera os campos.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.3-02-variaveis-magicas-conectadas-perfil.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.3-02-variaveis-magicas-conectadas-perfil.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⚙️</span> Configurações</h2>
+            <p class="feature-sub">Campo &#39;Par de Pausa&#39; renomeado para &#39;Par de Pausa (Chat)&#39; para deixar claro o contexto.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.3-03-campo-par-pausa-renomeado.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.3-03-campo-par-pausa-renomeado.mp4</code></div>
+                </div>
+            </div>
         </section>
 
         <footer class="site-footer">
@@ -40,5 +70,32 @@
         </footer>
 
     </main>
+
+    <!-- ─── Script: troca vídeo por placeholder se arquivo não existir ── -->
+    <script>
+        // Quando o MP4 ainda não foi gravado, o <video> falha no carregamento.
+        // Esse handler troca o vídeo pelo placeholder "🎬 Vídeo em breve" sem
+        // quebrar o layout da página.
+        document.querySelectorAll('.feature .video-wrap').forEach(function (wrap) {
+            var video = wrap.querySelector('video');
+            var placeholder = wrap.querySelector('.video-placeholder');
+            if (!video || !placeholder) return;
+
+            function trocarParaPlaceholder() {
+                video.style.display = 'none';
+                placeholder.hidden = false;
+            }
+
+            video.addEventListener('error', trocarParaPlaceholder);
+            // Alguns browsers não disparam 'error' quando o arquivo dá 404 num
+            // <source> implícito. Fallback: se depois de 800ms o readyState
+            // ainda for 0 (HAVE_NOTHING), assumimos que falhou.
+            setTimeout(function () {
+                if (video.readyState === 0 && video.networkState >= 3) {
+                    trocarParaPlaceholder();
+                }
+            }, 800);
+        });
+    </script>
 </body>
 </html>

@@ -26,15 +26,69 @@
             ⚙️ Pra atualizar: o Chrome busca a versão nova automaticamente em poucas horas. Se quiser forçar, vá em <code>chrome://extensions</code>, ative "Modo do desenvolvedor" e clique em "Atualizar". Depois clique no botão de Recarregar do card do SupportAssistant.
         </div>
 
-        <section class="changelog">
-            <h2>O que mudou nessa versão</h2>
-            <ul class="changes">
-                <li><span class="tag-mod">Botão Flutuante</span>Correção: &#39;Últimos dados extraídos&#39; agora some do painel quando desativado em Configurações → Geral.</li>
-                <li><span class="tag-mod">Short Text</span>Nova aba &#39;Alteração em massa&#39;: substitua um trecho de texto em vários atalhos de uma vez, com seleção individual ou em bloco.</li>
-                <li><span class="tag-mod">Short Text</span>Pesquisa Ampla no Balão (Popup) ativada por padrão em novas instalações.</li>
-                <li><span class="tag-mod">Formatador</span>Configurações de Ctrl+B e Ctrl+I removidas do chat — o editor já tem formatação nativa.</li>
-                <li><span class="tag-mod">Formatador</span>Ctrl+V no chat: ao colar URL com texto selecionado, o hyperlink é criado automaticamente via painel nativo do editor.</li>
-            </ul>
+        <section class="feature">
+            <h2><span class="icon">🎯</span> Botão Flutuante</h2>
+            <p class="feature-sub">Correção: &#39;Últimos dados extraídos&#39; agora some do painel quando desativado em Configurações → Geral.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.1-01-correcao-ultimos-dados-extraidos.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.1-01-correcao-ultimos-dados-extraidos.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⌨️</span> Short Text</h2>
+            <p class="feature-sub">Nova aba &#39;Alteração em massa&#39;: substitua um trecho de texto em vários atalhos de uma vez, com seleção individual ou em bloco.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.1-02-aba-alteracao-massa-substitua.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.1-02-aba-alteracao-massa-substitua.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⌨️</span> Short Text</h2>
+            <p class="feature-sub">Pesquisa Ampla no Balão (Popup) ativada por padrão em novas instalações.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.1-03-pesquisa-ampla-balao-popup.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.1-03-pesquisa-ampla-balao-popup.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">✏️</span> Formatador</h2>
+            <p class="feature-sub">Configurações de Ctrl+B e Ctrl+I removidas do chat: o editor já tem formatação nativa.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.1-04-configuracoes-ctrl-ctrl-removidas.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.1-04-configuracoes-ctrl-ctrl-removidas.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">✏️</span> Formatador</h2>
+            <p class="feature-sub">Ctrl+V no chat: ao colar URL com texto selecionado, o hyperlink é criado automaticamente via painel nativo do editor.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.1-05-ctrl-chat-colar-url.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.1-05-ctrl-chat-colar-url.mp4</code></div>
+                </div>
+            </div>
         </section>
 
         <footer class="site-footer">
@@ -42,5 +96,32 @@
         </footer>
 
     </main>
+
+    <!-- ─── Script: troca vídeo por placeholder se arquivo não existir ── -->
+    <script>
+        // Quando o MP4 ainda não foi gravado, o <video> falha no carregamento.
+        // Esse handler troca o vídeo pelo placeholder "🎬 Vídeo em breve" sem
+        // quebrar o layout da página.
+        document.querySelectorAll('.feature .video-wrap').forEach(function (wrap) {
+            var video = wrap.querySelector('video');
+            var placeholder = wrap.querySelector('.video-placeholder');
+            if (!video || !placeholder) return;
+
+            function trocarParaPlaceholder() {
+                video.style.display = 'none';
+                placeholder.hidden = false;
+            }
+
+            video.addEventListener('error', trocarParaPlaceholder);
+            // Alguns browsers não disparam 'error' quando o arquivo dá 404 num
+            // <source> implícito. Fallback: se depois de 800ms o readyState
+            // ainda for 0 (HAVE_NOTHING), assumimos que falhou.
+            setTimeout(function () {
+                if (video.readyState === 0 && video.networkState >= 3) {
+                    trocarParaPlaceholder();
+                }
+            }, 800);
+        });
+    </script>
 </body>
 </html>

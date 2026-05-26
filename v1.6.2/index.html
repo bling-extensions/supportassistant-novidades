@@ -26,28 +26,238 @@
             ⚙️ Pra atualizar: o Chrome busca a versão nova automaticamente em poucas horas. Se quiser forçar, vá em <code>chrome://extensions</code>, ative "Modo do desenvolvedor" e clique em "Atualizar". Depois clique no botão de Recarregar do card do SupportAssistant.
         </div>
 
-        <section class="changelog">
-            <h2>O que mudou nessa versão</h2>
-            <ul class="changes">
-                <li><span class="tag-mod">Tickets</span>Aviso de emoji incompatível: ao tentar enviar resposta com emojis não aceitos pelo banco do sistema, o envio é interrompido com 3 opções (ajustar, enviar como está, ou remover).</li>
-                <li><span class="tag-mod">Tickets</span>Novo botão &#39;☺&#39; ao lado de &#39;Enviar&#39; abre painel com ~70 emojis compatíveis em 7 categorias. Cores acompanham o tema do perfil.</li>
-                <li><span class="tag-mod">Geral</span>Aviso de confirmação ao fechar/atualizar a página, evitando perda de Ticket ou Chat por engano.</li>
-                <li><span class="tag-mod">Configurações</span>Sidebar reorganizado: &#39;Central de Atendimento&#39; dividido em &#39;Chat&#39; e &#39;Ticket&#39;, cada um com seus submenus.</li>
-                <li><span class="tag-mod">Configurações</span>Toggle &#39;Botão Flutuante S.A&#39; movido para Geral → Ferramentas do Painel.</li>
-                <li><span class="tag-mod">Configurações</span>Toggle &#39;Últimos Dados Extraídos&#39; movido de Geral para Chat.</li>
-                <li><span class="tag-mod">Configurações</span>&#39;Transformação rápida&#39; separada de &#39;Alteração em massa&#39; em cards distintos no Short Text.</li>
-                <li><span class="tag-mod">Formatador</span>Chave mestra dividida por escala: ativação independente para chat (Ctrl+V de hyperlink) e tickets (Ctrl+B / Ctrl+I / Ctrl+V).</li>
-                <li><span class="tag-mod">Formatador</span>Ctrl+V de URL com texto selecionado no chat agora aciona o popup nativo do editor e preenche o link automaticamente, sem inserir markdown manual.</li>
-                <li><span class="tag-mod">Short Text</span>Edição inline reformulada: clique em qualquer parte do card abre edição; auto-save ao sair; botões de salvar, cancelar e remover separados; campos vazios destacam em vermelho.</li>
-                <li><span class="tag-mod">Short Text</span>Configurações reordenadas: Ativar → Exigir Caractere(s) → Definir Caractere(s) → Pesquisa Ampla. &#39;Definir Caractere(s)&#39; aparece só quando o prefixo está ativo.</li>
-                <li><span class="tag-mod">Short Text</span>Variáveis [nome] / [name] / [cnpj] adicionadas como sintaxe alternativa às legadas {nome} / {cnpj}.</li>
-                <li><span class="tag-mod">Short Text</span>Correção: botão de remover atalho (lixeira) agora exclui de fato — antes o auto-save corrompia o índice durante o re-render e o atalho reaparecia.</li>
-                <li><span class="tag-mod">Short Text</span>Nova &#39;Transformação rápida&#39; em Alteração em massa: converte negrito/itálico/tachado entre markdown e HTML em todos os atalhos de uma vez.</li>
-                <li><span class="tag-mod">Short Text</span>Resultados de &#39;Alteração em massa&#39; agora em modal dedicado. Atalhos começam desmarcados e &#39;Selecionar todos&#39; aparece no topo.</li>
-                <li><span class="tag-mod">Short Text</span>&#39;Pesquisa Ampla&#39; agora vem ativada por padrão em novas instalações (popup, configurações e botão flutuante).</li>
-                <li><span class="tag-mod">Botão Flutuante</span>&#39;Removedor de Caracteres&#39; renomeada para &#39;Formatador de Caracteres&#39;, com 3 ações: Limpar (acentos/espaços), Formatar CPF e Formatar CNPJ.</li>
-                <li><span class="tag-mod">Roadmap</span>Drill-down expandido: cada barra pode ter painel de detalhes próprio. Régua destaca múltiplos de 7 (7/14/21/28). Nova sintaxe |max limita versões exibidas no drill-down.</li>
-            </ul>
+        <section class="feature">
+            <h2><span class="icon">🎫</span> Tickets</h2>
+            <p class="feature-sub">Aviso de emoji incompatível: ao tentar enviar resposta com emojis não aceitos pelo banco do sistema, o envio é interrompido com 3 opções (ajustar, enviar como está, ou remover).</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.2-01-aviso-emoji-incompativel-tentar.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.2-01-aviso-emoji-incompativel-tentar.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">🎫</span> Tickets</h2>
+            <p class="feature-sub">Novo botão &#39;☺&#39; ao lado de &#39;Enviar&#39; abre painel com ~70 emojis compatíveis em 7 categorias. Cores acompanham o tema do perfil.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.2-02-botao-lado-enviar-abre.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.2-02-botao-lado-enviar-abre.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">📦</span> Geral</h2>
+            <p class="feature-sub">Aviso de confirmação ao fechar/atualizar a página, evitando perda de Ticket ou Chat por engano.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.2-03-aviso-confirmacao-fechar-atualizar.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.2-03-aviso-confirmacao-fechar-atualizar.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⚙️</span> Configurações</h2>
+            <p class="feature-sub">Sidebar reorganizado: &#39;Central de Atendimento&#39; dividido em &#39;Chat&#39; e &#39;Ticket&#39;, cada um com seus submenus.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.2-04-sidebar-reorganizado-central-atendimento.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.2-04-sidebar-reorganizado-central-atendimento.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⚙️</span> Configurações</h2>
+            <p class="feature-sub">Toggle &#39;Botão Flutuante S.A&#39; movido para Geral → Ferramentas do Painel.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.2-05-toggle-botao-flutuante-movido.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.2-05-toggle-botao-flutuante-movido.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⚙️</span> Configurações</h2>
+            <p class="feature-sub">Toggle &#39;Últimos Dados Extraídos&#39; movido de Geral para Chat.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.2-06-toggle-ultimos-dados-extraidos.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.2-06-toggle-ultimos-dados-extraidos.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⚙️</span> Configurações</h2>
+            <p class="feature-sub">&#39;Transformação rápida&#39; separada de &#39;Alteração em massa&#39; em cards distintos no Short Text.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.2-07-transformacao-rapida-separada-alteracao.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.2-07-transformacao-rapida-separada-alteracao.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">✏️</span> Formatador</h2>
+            <p class="feature-sub">Chave mestra dividida por escala: ativação independente para chat (Ctrl+V de hyperlink) e tickets (Ctrl+B / Ctrl+I / Ctrl+V).</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.2-08-chave-mestra-dividida-escala.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.2-08-chave-mestra-dividida-escala.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">✏️</span> Formatador</h2>
+            <p class="feature-sub">Ctrl+V de URL com texto selecionado no chat agora aciona o popup nativo do editor e preenche o link automaticamente, sem inserir markdown manual.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.2-09-ctrl-url-texto-selecionado.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.2-09-ctrl-url-texto-selecionado.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⌨️</span> Short Text</h2>
+            <p class="feature-sub">Edição inline reformulada: clique em qualquer parte do card abre edição; auto-save ao sair; botões de salvar, cancelar e remover separados; campos vazios destacam em vermelho.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.2-10-edicao-inline-reformulada-clique.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.2-10-edicao-inline-reformulada-clique.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⌨️</span> Short Text</h2>
+            <p class="feature-sub">Configurações reordenadas: Ativar → Exigir Caractere(s) → Definir Caractere(s) → Pesquisa Ampla. &#39;Definir Caractere(s)&#39; aparece só quando o prefixo está ativo.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.2-11-configuracoes-reordenadas-ativar-exigir.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.2-11-configuracoes-reordenadas-ativar-exigir.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⌨️</span> Short Text</h2>
+            <p class="feature-sub">Variáveis [nome] / [name] / [cnpj] adicionadas como sintaxe alternativa às legadas {nome} / {cnpj}.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.2-12-variaveis-adicionadas-sintaxe-alternativa.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.2-12-variaveis-adicionadas-sintaxe-alternativa.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⌨️</span> Short Text</h2>
+            <p class="feature-sub">Correção: botão de remover atalho (lixeira) agora exclui de fato: antes o auto-save corrompia o índice durante o re-render e o atalho reaparecia.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.2-13-correcao-botao-remover-atalho.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.2-13-correcao-botao-remover-atalho.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⌨️</span> Short Text</h2>
+            <p class="feature-sub">Nova &#39;Transformação rápida&#39; em Alteração em massa: converte negrito/itálico/tachado entre markdown e HTML em todos os atalhos de uma vez.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.2-14-transformacao-rapida-alteracao-massa.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.2-14-transformacao-rapida-alteracao-massa.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⌨️</span> Short Text</h2>
+            <p class="feature-sub">Resultados de &#39;Alteração em massa&#39; agora em modal dedicado. Atalhos começam desmarcados e &#39;Selecionar todos&#39; aparece no topo.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.2-15-resultados-alteracao-massa-modal.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.2-15-resultados-alteracao-massa-modal.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⌨️</span> Short Text</h2>
+            <p class="feature-sub">&#39;Pesquisa Ampla&#39; agora vem ativada por padrão em novas instalações (popup, configurações e botão flutuante).</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.2-16-pesquisa-ampla-vem-ativada.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.2-16-pesquisa-ampla-vem-ativada.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">🎯</span> Botão Flutuante</h2>
+            <p class="feature-sub">&#39;Removedor de Caracteres&#39; renomeada para &#39;Formatador de Caracteres&#39;, com 3 ações: Limpar (acentos/espaços), Formatar CPF e Formatar CNPJ.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.2-17-removedor-caracteres-renomeada-formatador.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.2-17-removedor-caracteres-renomeada-formatador.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">🗺️</span> Roadmap</h2>
+            <p class="feature-sub">Drill-down expandido: cada barra pode ter painel de detalhes próprio. Régua destaca múltiplos de 7 (7/14/21/28). Nova sintaxe |max limita versões exibidas no drill-down.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.2-18-drill-down-expandido-barra-pode.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.2-18-drill-down-expandido-barra-pode.mp4</code></div>
+                </div>
+            </div>
         </section>
 
         <footer class="site-footer">
@@ -55,5 +265,32 @@
         </footer>
 
     </main>
+
+    <!-- ─── Script: troca vídeo por placeholder se arquivo não existir ── -->
+    <script>
+        // Quando o MP4 ainda não foi gravado, o <video> falha no carregamento.
+        // Esse handler troca o vídeo pelo placeholder "🎬 Vídeo em breve" sem
+        // quebrar o layout da página.
+        document.querySelectorAll('.feature .video-wrap').forEach(function (wrap) {
+            var video = wrap.querySelector('video');
+            var placeholder = wrap.querySelector('.video-placeholder');
+            if (!video || !placeholder) return;
+
+            function trocarParaPlaceholder() {
+                video.style.display = 'none';
+                placeholder.hidden = false;
+            }
+
+            video.addEventListener('error', trocarParaPlaceholder);
+            // Alguns browsers não disparam 'error' quando o arquivo dá 404 num
+            // <source> implícito. Fallback: se depois de 800ms o readyState
+            // ainda for 0 (HAVE_NOTHING), assumimos que falhou.
+            setTimeout(function () {
+                if (video.readyState === 0 && video.networkState >= 3) {
+                    trocarParaPlaceholder();
+                }
+            }, 800);
+        });
+    </script>
 </body>
 </html>

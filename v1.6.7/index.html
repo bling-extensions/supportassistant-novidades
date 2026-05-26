@@ -26,19 +26,121 @@
             ⚙️ Pra atualizar: o Chrome busca a versão nova automaticamente em poucas horas. Se quiser forçar, vá em <code>chrome://extensions</code>, ative "Modo do desenvolvedor" e clique em "Atualizar". Depois clique no botão de Recarregar do card do SupportAssistant.
         </div>
 
-        <section class="changelog">
-            <h2>O que mudou nessa versão</h2>
-            <ul class="changes">
-                <li><span class="tag-mod">Resumo Atendimento</span>Nova ferramenta de resumo de atendimento via Google Gemini com arquitetura BYOK (Bring Your Own Key): cada atendente gera a própria chave gratuita em aistudio.google.com/apikey. A chave fica cifrada (AES-GCM) em chrome.storage.local. Botão &#39;✨ Resumo&#39; aparece no painel do sistema de tickets e no chat da central de atendimento.</li>
-                <li><span class="tag-mod">Resumo Atendimento</span>Modal com sidebar de log de execução e link direto para o painel de rate limit do Google AI Studio. Cache de 7 dias por atendimento: ao reabrir, mostra o último resumo gerado. Botão &#39;Resumir conversa atual&#39; força nova geração.</li>
-                <li><span class="tag-mod">Resumo Atendimento &gt; Chat</span>Botão &#39;Inserir como anotação interna&#39; no chat: o texto entra formatado (negrito e itálico reais) no editor TipTap, em vez do markdown bruto com asteriscos visíveis.</li>
-                <li><span class="tag-mod">Configurações</span>Nova aba &#39;Resumo Atendimento&#39; no menu lateral com 3 sub-abas: Geral (chave da API Gemini, movida da aba Geral anterior), Prompt Chat (resumos de conversas do chat) e Prompt Ticket (resumos do histórico do ticket).</li>
-                <li><span class="tag-mod">Configurações &gt; Resumo Atendimento</span>Editor de prompt em cada sub-aba: edite o texto enviado ao Gemini, clique em Salvar para aplicar no próximo resumo, ou em &#39;Restaurar padrão&#39; para voltar à versão sugerida. Prompts personalizados ficam em chrome.storage.local (chave iaPromptsCustom) com prioridade sobre os defaults embarcados.</li>
-                <li><span class="tag-mod">Atalhos</span>Ctrl+B, Ctrl+I e Ctrl+V (quando o conteúdo colado é uma URL) passam a funcionar no editor de texto dos atalhos, tanto em Configurações &gt; Short Text &gt; Atalhos quanto no painel do botão flutuante. Usam a mesma sintaxe configurada em Ticket &gt; Formatação de Respostas.</li>
-                <li><span class="tag-mod">Short Text</span>Nova variável mágica [Turno]: substituída por &#39;bom dia&#39; (06h-12h), &#39;boa tarde&#39; (12h-18h) ou &#39;boa noite&#39; (18h-06h), com detecção automática de capitalização ([Turno] vira &#39;Bom dia&#39;, [turno] vira &#39;bom dia&#39;).</li>
-                <li><span class="tag-mod">Short Text</span>Nova variável mágica [complete]: ao expandir o atalho, abre popup pedindo para o usuário preencher os campos marcados. Suporta múltiplos campos, navegação por Enter e preview em tempo real.</li>
-                <li><span class="tag-mod">Tickets</span>Correção do &#39;cursor pulando&#39; no textarea de resposta: race condition entre echo do chrome.storage e digitação foi eliminada com helper que preserva selectionStart/selectionEnd e descarte de eco redundante.</li>
-            </ul>
+        <section class="feature">
+            <h2><span class="icon">✨</span> Resumo Atendimento</h2>
+            <p class="feature-sub">Nova ferramenta de resumo de atendimento via Google Gemini com arquitetura BYOK (Bring Your Own Key): cada atendente gera a própria chave gratuita em aistudio.google.com/apikey. A chave fica cifrada (AES-GCM) em chrome.storage.local. Botão &#39;✨ Resumo&#39; aparece no painel do sistema de tickets e no chat da central de atendimento.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.7-01-ferramenta-resumo-atendimento-via.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.7-01-ferramenta-resumo-atendimento-via.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">✨</span> Resumo Atendimento</h2>
+            <p class="feature-sub">Modal com sidebar de log de execução e link direto para o painel de rate limit do Google AI Studio. Cache de 7 dias por atendimento: ao reabrir, mostra o último resumo gerado. Botão &#39;Resumir conversa atual&#39; força nova geração.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.7-02-modal-sidebar-log-execucao.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.7-02-modal-sidebar-log-execucao.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">✨</span> Resumo Atendimento &gt; Chat</h2>
+            <p class="feature-sub">Botão &#39;Inserir como anotação interna&#39; no chat: o texto entra formatado (negrito e itálico reais) no editor TipTap, em vez do markdown bruto com asteriscos visíveis.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.7-03-botao-inserir-anotacao-interna.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.7-03-botao-inserir-anotacao-interna.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⚙️</span> Configurações</h2>
+            <p class="feature-sub">Nova aba &#39;Resumo Atendimento&#39; no menu lateral com 3 sub-abas: Geral (chave da API Gemini, movida da aba Geral anterior), Prompt Chat (resumos de conversas do chat) e Prompt Ticket (resumos do histórico do ticket).</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.7-04-aba-resumo-atendimento-menu.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.7-04-aba-resumo-atendimento-menu.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⚙️</span> Configurações &gt; Resumo Atendimento</h2>
+            <p class="feature-sub">Editor de prompt em cada sub-aba: edite o texto enviado ao Gemini, clique em Salvar para aplicar no próximo resumo, ou em &#39;Restaurar padrão&#39; para voltar à versão sugerida. Prompts personalizados ficam em chrome.storage.local (chave iaPromptsCustom) com prioridade sobre os defaults embarcados.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.7-05-editor-prompt-sub-aba-edite.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.7-05-editor-prompt-sub-aba-edite.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⌨️</span> Atalhos</h2>
+            <p class="feature-sub">Ctrl+B, Ctrl+I e Ctrl+V (quando o conteúdo colado é uma URL) passam a funcionar no editor de texto dos atalhos, tanto em Configurações &gt; Short Text &gt; Atalhos quanto no painel do botão flutuante. Usam a mesma sintaxe configurada em Ticket &gt; Formatação de Respostas.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.7-06-ctrl-ctrl-ctrl-conteudo.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.7-06-ctrl-ctrl-ctrl-conteudo.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⌨️</span> Short Text</h2>
+            <p class="feature-sub">Nova variável mágica [Turno]: substituída por &#39;bom dia&#39; (06h-12h), &#39;boa tarde&#39; (12h-18h) ou &#39;boa noite&#39; (18h-06h), com detecção automática de capitalização ([Turno] vira &#39;Bom dia&#39;, [turno] vira &#39;bom dia&#39;).</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.7-07-variavel-magica-substituida-bom.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.7-07-variavel-magica-substituida-bom.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">⌨️</span> Short Text</h2>
+            <p class="feature-sub">Nova variável mágica [complete]: ao expandir o atalho, abre popup pedindo para o usuário preencher os campos marcados. Suporta múltiplos campos, navegação por Enter e preview em tempo real.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.7-08-variavel-magica-expandir-atalho.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.7-08-variavel-magica-expandir-atalho.mp4</code></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2><span class="icon">🎫</span> Tickets</h2>
+            <p class="feature-sub">Correção do &#39;cursor pulando&#39; no textarea de resposta: race condition entre echo do chrome.storage e digitação foi eliminada com helper que preserva selectionStart/selectionEnd e descarte de eco redundante.</p>
+
+            <div class="video-wrap">
+                <video src="../assets/videos/v1.6.7-09-correcao-cursor-pulando-textarea.mp4" autoplay muted loop playsinline></video>
+                <div class="video-placeholder" hidden>
+                    <div class="ph-icon">🎬</div>
+                    <div>Vídeo em breve: <code>v1.6.7-09-correcao-cursor-pulando-textarea.mp4</code></div>
+                </div>
+            </div>
         </section>
 
         <footer class="site-footer">
@@ -46,5 +148,32 @@
         </footer>
 
     </main>
+
+    <!-- ─── Script: troca vídeo por placeholder se arquivo não existir ── -->
+    <script>
+        // Quando o MP4 ainda não foi gravado, o <video> falha no carregamento.
+        // Esse handler troca o vídeo pelo placeholder "🎬 Vídeo em breve" sem
+        // quebrar o layout da página.
+        document.querySelectorAll('.feature .video-wrap').forEach(function (wrap) {
+            var video = wrap.querySelector('video');
+            var placeholder = wrap.querySelector('.video-placeholder');
+            if (!video || !placeholder) return;
+
+            function trocarParaPlaceholder() {
+                video.style.display = 'none';
+                placeholder.hidden = false;
+            }
+
+            video.addEventListener('error', trocarParaPlaceholder);
+            // Alguns browsers não disparam 'error' quando o arquivo dá 404 num
+            // <source> implícito. Fallback: se depois de 800ms o readyState
+            // ainda for 0 (HAVE_NOTHING), assumimos que falhou.
+            setTimeout(function () {
+                if (video.readyState === 0 && video.networkState >= 3) {
+                    trocarParaPlaceholder();
+                }
+            }, 800);
+        });
+    </script>
 </body>
 </html>
