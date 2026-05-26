@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SupportAssistant v1.6.7: Novidades</title>
+    <meta name="description" content="Lançamento do Resumo do Atendimento via Google Gemini, com arquitetura BYOK (cada atendente usa a própria chave gratuita).">
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+    <main class="wrap">
+
+        <a class="back-link" href="../">← Todas as versões</a>
+
+        <header class="site-header">
+            <div class="brand"><span class="dot"></span> SupportAssistant</div>
+            <div class="version-meta">
+                <span class="v-num-big">v1.6.7</span>
+                <span class="v-date-big">20 de maio de 2026</span>
+            </div>
+            <h1>Resumo do Atendimento via Gemini (BYOK)</h1>
+            <p class="lead">Lançamento do Resumo do Atendimento via Google Gemini, com arquitetura BYOK (cada atendente usa a própria chave gratuita).</p>
+        </header>
+
+        <div class="intro">
+            ⚙️ Pra atualizar: o Chrome busca a versão nova automaticamente em poucas horas. Se quiser forçar, vá em <code>chrome://extensions</code>, ative "Modo do desenvolvedor" e clique em "Atualizar". Depois clique no botão de Recarregar do card do SupportAssistant.
+        </div>
+
+        <section class="changelog">
+            <h2>O que mudou nessa versão</h2>
+            <ul class="changes">
+                <li><span class="tag-mod">Resumo Atendimento</span>Nova ferramenta de resumo de atendimento via Google Gemini com arquitetura BYOK (Bring Your Own Key): cada atendente gera a própria chave gratuita em aistudio.google.com/apikey. A chave fica cifrada (AES-GCM) em chrome.storage.local. Botão &#39;✨ Resumo&#39; aparece no painel do sistema de tickets e no chat da central de atendimento.</li>
+                <li><span class="tag-mod">Resumo Atendimento</span>Modal com sidebar de log de execução e link direto para o painel de rate limit do Google AI Studio. Cache de 7 dias por atendimento: ao reabrir, mostra o último resumo gerado. Botão &#39;Resumir conversa atual&#39; força nova geração.</li>
+                <li><span class="tag-mod">Resumo Atendimento &gt; Chat</span>Botão &#39;Inserir como anotação interna&#39; no chat: o texto entra formatado (negrito e itálico reais) no editor TipTap, em vez do markdown bruto com asteriscos visíveis.</li>
+                <li><span class="tag-mod">Configurações</span>Nova aba &#39;Resumo Atendimento&#39; no menu lateral com 3 sub-abas: Geral (chave da API Gemini, movida da aba Geral anterior), Prompt Chat (resumos de conversas do chat) e Prompt Ticket (resumos do histórico do ticket).</li>
+                <li><span class="tag-mod">Configurações &gt; Resumo Atendimento</span>Editor de prompt em cada sub-aba: edite o texto enviado ao Gemini, clique em Salvar para aplicar no próximo resumo, ou em &#39;Restaurar padrão&#39; para voltar à versão sugerida. Prompts personalizados ficam em chrome.storage.local (chave iaPromptsCustom) com prioridade sobre os defaults embarcados.</li>
+                <li><span class="tag-mod">Atalhos</span>Ctrl+B, Ctrl+I e Ctrl+V (quando o conteúdo colado é uma URL) passam a funcionar no editor de texto dos atalhos, tanto em Configurações &gt; Short Text &gt; Atalhos quanto no painel do botão flutuante. Usam a mesma sintaxe configurada em Ticket &gt; Formatação de Respostas.</li>
+                <li><span class="tag-mod">Short Text</span>Nova variável mágica [Turno]: substituída por &#39;bom dia&#39; (06h-12h), &#39;boa tarde&#39; (12h-18h) ou &#39;boa noite&#39; (18h-06h), com detecção automática de capitalização ([Turno] vira &#39;Bom dia&#39;, [turno] vira &#39;bom dia&#39;).</li>
+                <li><span class="tag-mod">Short Text</span>Nova variável mágica [complete]: ao expandir o atalho, abre popup pedindo para o usuário preencher os campos marcados. Suporta múltiplos campos, navegação por Enter e preview em tempo real.</li>
+                <li><span class="tag-mod">Tickets</span>Correção do &#39;cursor pulando&#39; no textarea de resposta: race condition entre echo do chrome.storage e digitação foi eliminada com helper que preserva selectionStart/selectionEnd e descarte de eco redundante.</li>
+            </ul>
+        </section>
+
+        <footer class="site-footer">
+            Desenvolvido por <a href="https://setradev.com" target="_blank" rel="noopener">Setra Dev</a> · <a href="../">Todas as versões</a>
+        </footer>
+
+    </main>
+</body>
+</html>

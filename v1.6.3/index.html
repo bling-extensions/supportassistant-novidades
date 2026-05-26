@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SupportAssistant v1.6.3: Novidades</title>
+    <meta name="description" content="Variáveis mágicas conectadas ao Perfil do Analista e correção do bug que ignorava negrito/itálico em atalhos com formatação em tag única.">
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+    <main class="wrap">
+
+        <a class="back-link" href="../">← Todas as versões</a>
+
+        <header class="site-header">
+            <div class="brand"><span class="dot"></span> SupportAssistant</div>
+            <div class="version-meta">
+                <span class="v-num-big">v1.6.3</span>
+                <span class="v-date-big">11 de maio de 2026</span>
+            </div>
+            <h1>Variáveis de Perfil ([L1], [L2], [Supervisor], [ParPausa])</h1>
+            <p class="lead">Variáveis mágicas conectadas ao Perfil do Analista e correção do bug que ignorava negrito/itálico em atalhos com formatação em tag única.</p>
+        </header>
+
+        <div class="intro">
+            ⚙️ Pra atualizar: o Chrome busca a versão nova automaticamente em poucas horas. Se quiser forçar, vá em <code>chrome://extensions</code>, ative "Modo do desenvolvedor" e clique em "Atualizar". Depois clique no botão de Recarregar do card do SupportAssistant.
+        </div>
+
+        <section class="changelog">
+            <h2>O que mudou nessa versão</h2>
+            <ul class="changes">
+                <li><span class="tag-mod">Short Text</span>Correção: atalhos com formatação envolvendo todo o conteúdo em uma única tag (ex: &lt;b&gt;texto&lt;/b&gt; sem nada fora) não aplicavam negrito/itálico no chat. O editor descartava marcas inline isoladas; agora a inserção é tratada para preservar a formatação.</li>
+                <li><span class="tag-mod">Short Text</span>Novas variáveis mágicas conectadas ao Perfil do Analista: [L1] (Nome do Analista), [L2] (L2 Responsável), [Supervisor] (Supervisor Responsável) e [ParPausa] (Par de Pausa do Chat). Os valores são lidos de Configurações &gt; Perfil &gt; Dados do Analista e atualizam em tempo real quando você altera os campos.</li>
+                <li><span class="tag-mod">Configurações</span>Campo &#39;Par de Pausa&#39; renomeado para &#39;Par de Pausa (Chat)&#39; para deixar claro o contexto.</li>
+            </ul>
+        </section>
+
+        <footer class="site-footer">
+            Desenvolvido por <a href="https://setradev.com" target="_blank" rel="noopener">Setra Dev</a> · <a href="../">Todas as versões</a>
+        </footer>
+
+    </main>
+</body>
+</html>

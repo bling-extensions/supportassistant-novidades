@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SupportAssistant v1.6.6: Novidades</title>
+    <meta name="description" content="Etiquetas laterais (estilo abas de Bíblia) no painel flutuante e nova aba Tickets com gerenciador de pastas em árvore.">
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+    <main class="wrap">
+
+        <a class="back-link" href="../">← Todas as versões</a>
+
+        <header class="site-header">
+            <div class="brand"><span class="dot"></span> SupportAssistant</div>
+            <div class="version-meta">
+                <span class="v-num-big">v1.6.6</span>
+                <span class="v-date-big">18 de maio de 2026</span>
+            </div>
+            <h1>Etiquetas laterais e gerenciador de pastas em árvore</h1>
+            <p class="lead">Etiquetas laterais (estilo abas de Bíblia) no painel flutuante e nova aba Tickets com gerenciador de pastas em árvore.</p>
+        </header>
+
+        <div class="intro">
+            ⚙️ Pra atualizar: o Chrome busca a versão nova automaticamente em poucas horas. Se quiser forçar, vá em <code>chrome://extensions</code>, ative "Modo do desenvolvedor" e clique em "Atualizar". Depois clique no botão de Recarregar do card do SupportAssistant.
+        </div>
+
+        <section class="changelog">
+            <h2>O que mudou nessa versão</h2>
+            <ul class="changes">
+                <li><span class="tag-mod">Botão Flutuante</span>Etiquetas laterais no painel (estilo &#39;abas de Bíblia&#39;) projetadas para fora da borda interna, com 3 abas: Principal (verde), Fiscal (amarelo trigo) e Tickets (azul céu). Mudam de lado automaticamente conforme o painel está encostado à esquerda ou direita da tela.</li>
+                <li><span class="tag-mod">Botão Flutuante &gt; Tickets</span>Nova aba &#39;Tickets&#39; com gerenciador de pastas e links em árvore: crie pastas e subpastas, adicione tickets como links clicáveis (abrem em nova aba). Quando você está com um ticket aberto, o formulário &#39;Novo Ticket&#39; é pré-preenchido automaticamente com o número e a URL.</li>
+                <li><span class="tag-mod">Configurações &gt; Pasta de Tickets</span>Novo item no menu lateral com o mesmo gerenciador do botão flutuante. Qualquer alteração feita aqui ou no botão flutuante é sincronizada em tempo real entre os dois.</li>
+                <li><span class="tag-mod">Configurações &gt; Pasta de Tickets &gt; Backup</span>Sub-aba &#39;Backup&#39; para exportar (gera JSON com nome timestampado) e importar (modo &#39;Mesclar&#39; deduplicando por nome de pasta e URL de ticket no mesmo nível, ou &#39;Substituir tudo&#39; com confirmação).</li>
+                <li><span class="tag-mod">Configurações &gt; Perfil &gt; Armazenamento Local</span>Nova categoria &#39;Pastas de Tickets&#39; no detalhamento, com botão &#39;i&#39; que abre direto a aba de gestão.</li>
+                <li><span class="tag-mod">Short Text</span>Nova variável mágica [IDTicket]: ao expandir um atalho dentro de um ticket aberto, é substituída pelo ID numérico do ticket atual. Card &#39;Apenas no Tickets&#39; adicionado no aside &#39;Variáveis Mágicas&#39; (reordenado para Em todos &gt; Tickets &gt; Chat).</li>
+                <li><span class="tag-mod">Short Text</span>Correção: atalhos com espaço no gatilho (ex: &#39;não responde&#39;) substituíam apenas a última palavra ao serem selecionados pelo balão, deixando o início do gatilho intacto. Agora o cálculo de quantos caracteres apagar usa o maior prefixo do gatilho que casa com o final do texto digitado.</li>
+                <li><span class="tag-mod">Configurações &gt; Avisos</span>Cards &#39;Ideias aplicadas&#39; e &#39;Caçadores de Bugs&#39; do Hall da Contribuição agora colapsáveis (fechados por padrão, expandem ao clicar).</li>
+                <li><span class="tag-mod">Configurações &gt; Avisos</span>Eduardo Sottili adicionado em &#39;Ideias aplicadas&#39; (sugestão da variável [IDTicket]). Deise Kayser adicionada em &#39;Caçadores de Bugs&#39; (bug do gatilho com espaço no balão).</li>
+                <li><span class="tag-mod">Roadmap &gt; Horizonte futuro</span>Dois novos cards: &#39;Integração com Controle Tickets - L2&#39; (fusão das ferramentas L2 no Support Assistant) e &#39;Controle de permissões de módulos via OAuth&#39; (perfis L1/L2/Supervisor liberando ou restringindo módulos).</li>
+                <li><span class="tag-mod">Padronização visual</span>Padrão de cores fixo para botões de ação adotado em todo o projeto: Verde (confirmar/salvar), Cinza (cancelar/editar), Vermelho (excluir/remover). Documentado no CLAUDE.md do projeto. Botões de cancelar e remover dos atalhos do Short Text corrigidos (estavam com cores trocadas). Ícones ✎/🗑 da árvore de tickets (config e botão flutuante) trocados por SVGs com hover na cor da intenção.</li>
+            </ul>
+        </section>
+
+        <footer class="site-footer">
+            Desenvolvido por <a href="https://setradev.com" target="_blank" rel="noopener">Setra Dev</a> · <a href="../">Todas as versões</a>
+        </footer>
+
+    </main>
+</body>
+</html>

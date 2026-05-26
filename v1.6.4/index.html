@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SupportAssistant v1.6.4: Novidades</title>
+    <meta name="description" content="Tema escuro novo, importação direta da Magical e do Web TextExpander, e card Armazenamento Local no Perfil.">
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+    <main class="wrap">
+
+        <a class="back-link" href="../">← Todas as versões</a>
+
+        <header class="site-header">
+            <div class="brand"><span class="dot"></span> SupportAssistant</div>
+            <div class="version-meta">
+                <span class="v-num-big">v1.6.4</span>
+                <span class="v-date-big">12 de maio de 2026</span>
+            </div>
+            <h1>Tema escuro reformulado e importações externas</h1>
+            <p class="lead">Tema escuro novo, importação direta da Magical e do Web TextExpander, e card Armazenamento Local no Perfil.</p>
+        </header>
+
+        <div class="intro">
+            ⚙️ Pra atualizar: o Chrome busca a versão nova automaticamente em poucas horas. Se quiser forçar, vá em <code>chrome://extensions</code>, ative "Modo do desenvolvedor" e clique em "Atualizar". Depois clique no botão de Recarregar do card do SupportAssistant.
+        </div>
+
+        <section class="changelog">
+            <h2>O que mudou nessa versão</h2>
+            <ul class="changes">
+                <li><span class="tag-mod">Configurações &gt; Short Text &gt; Atalhos</span>Card lateral &#39;Variáveis Mágicas&#39;: lista clicável das tags disponíveis (Chat e Todos) com link direto para o Perfil.</li>
+                <li><span class="tag-mod">Tema Escuro</span>Reformulado: fundo grafite, texto branco/cinza claro, verde apenas em acentos. Aplicado em configurações, botão flutuante, popup do Short Text e seletor de emojis.</li>
+                <li><span class="tag-mod">Botão Flutuante</span>Correção: header do painel não atualizava ao trocar de tema.</li>
+                <li><span class="tag-mod">Botão Flutuante</span>Modal &#39;Substituição aplicada&#39; do bulk transform agora respeita o tema (banner verde escurecido, textos brancos no escuro).</li>
+                <li><span class="tag-mod">Short Text</span>Cole formatado: ao colar texto rico (do editor do chat) num campo de atalho, o conteúdo HTML é convertido automaticamente para markdown (**negrito**, *itálico*, [link](url), ~~tachado~~).</li>
+                <li><span class="tag-mod">Short Text &gt; Importação</span>Nova seção &#39;Importação externa&#39; com botões &#39;Importar JSON: Magical&#39; e &#39;Importar CSV: Web TextExpander&#39;.</li>
+                <li><span class="tag-mod">Short Text &gt; Importação</span>Modal &#39;Como gerar os arquivos de exportação&#39; com instruções passo a passo e scripts prontos com botão Copiar.</li>
+                <li><span class="tag-mod">Short Text &gt; Importação</span>Script de extração da Magical converte HTML rico para markdown preservando negrito, itálico, links, listas e quebras de linha. Arquivo gerado: SupportAssistant-extract-magical.json.</li>
+                <li><span class="tag-mod">Short Text &gt; Importação</span>Modos &#39;Excluir atuais&#39;, &#39;Substituir existentes&#39; e &#39;Apenas adicionar&#39; agora compartilhados entre todos os fluxos (CSV padrão, Magical, Web TextExpander). Card &#39;Modo de importação&#39; isolado no topo da aba.</li>
+                <li><span class="tag-mod">Short Text &gt; Importação</span>Modo &#39;Substituir existentes&#39; abre modal com diff antes/depois para selecionar individualmente os conflitos a sobrescrever (com &#39;Selecionar todos&#39; / &#39;Limpar seleção&#39;). Atalhos sem conflito são adicionados normalmente.</li>
+                <li><span class="tag-mod">Short Text &gt; Atalhos</span>Validação anti-duplicata ao salvar atalho: gatilho repetido bloqueia o salvamento com dica em vermelho. Comparação case-insensitive (&#39;feliz&#39; e &#39;Feliz&#39; são o mesmo).</li>
+                <li><span class="tag-mod">Configurações &gt; Perfil</span>Novo card &#39;Armazenamento Local&#39;: barra de uso com cores dinâmicas (verde até 60%, amarelo 60-85%, vermelho 85%+) e detalhamento colapsável. Atualiza automaticamente quando o storage muda.</li>
+                <li><span class="tag-mod">Configurações &gt; Guia de Uso</span>Descrição dos 4 temas atualizada (Claro, Escuro, Verde, Azul). Links &#39;(definido no Perfil)&#39; nas Variáveis Mágicas levam direto para a aba Perfil.</li>
+            </ul>
+        </section>
+
+        <footer class="site-footer">
+            Desenvolvido por <a href="https://setradev.com" target="_blank" rel="noopener">Setra Dev</a> · <a href="../">Todas as versões</a>
+        </footer>
+
+    </main>
+</body>
+</html>

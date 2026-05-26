@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SupportAssistant v1.6.5: Novidades</title>
+    <meta name="description" content="Rascunho Automático: nada do que você digitar no campo de resposta se perde. Cifrado, sincronizado, com seção dedicada no flutuante.">
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+    <main class="wrap">
+
+        <a class="back-link" href="../">← Todas as versões</a>
+
+        <header class="site-header">
+            <div class="brand"><span class="dot"></span> SupportAssistant</div>
+            <div class="version-meta">
+                <span class="v-num-big">v1.6.5</span>
+                <span class="v-date-big">14 de maio de 2026</span>
+            </div>
+            <h1>Rascunho Automático cifrado de tickets</h1>
+            <p class="lead">Rascunho Automático: nada do que você digitar no campo de resposta se perde. Cifrado, sincronizado, com seção dedicada no flutuante.</p>
+        </header>
+
+        <div class="intro">
+            ⚙️ Pra atualizar: o Chrome busca a versão nova automaticamente em poucas horas. Se quiser forçar, vá em <code>chrome://extensions</code>, ative "Modo do desenvolvedor" e clique em "Atualizar". Depois clique no botão de Recarregar do card do SupportAssistant.
+        </div>
+
+        <section class="changelog">
+            <h2>O que mudou nessa versão</h2>
+            <ul class="changes">
+                <li><span class="tag-mod">Tickets</span>Novo &#39;Rascunho Automático&#39;: preserva texto digitado no campo de resposta mesmo após F5, fechar a aba, fechar o navegador ou reiniciar o computador. Restauração silenciosa ao reabrir o ticket.</li>
+                <li><span class="tag-mod">Tickets</span>Rascunho cifrado com AES-GCM antes de ir para chrome.storage.local. Cada ticket tem rascunho próprio, identificado por número visível + ID da URL.</li>
+                <li><span class="tag-mod">Tickets</span>Apaga sozinho ao enviar a mensagem (apenas após confirmação do envio), ao clicar em &#39;Limpar&#39; do sistema de tickets, ou após 1 hora sem edição.</li>
+                <li><span class="tag-mod">Configurações &gt; Ticket &gt; Formatação de Respostas</span>Novo card &#39;Rascunho Automático&#39; com toggle para preservar/desativar e select &#39;Exibir rascunhos no botão flutuante&#39; (Ocultar quando não houver / Sempre exibir / Nunca exibir). Ao desligar o toggle, todos os rascunhos existentes são apagados.</li>
+                <li><span class="tag-mod">Botão Flutuante</span>Nova seção &#39;Rascunhos preservados&#39; entre &#39;Últimos dados extraídos&#39; e &#39;Atalhos recentes&#39;: lista colapsável (fechada por padrão) com os tickets que têm rascunho salvo. Cada item linka pro ticket em nova aba. Atualiza em tempo real conforme rascunhos são criados ou apagados.</li>
+                <li><span class="tag-mod">Configurações &gt; Perfil &gt; Armazenamento Local</span>Nova categoria &#39;Rascunhos de Tickets&#39; no detalhamento, com botão &#39;i&#39; que abre modal listando os tickets com rascunho preservado e link direto para cada um.</li>
+                <li><span class="tag-mod">Short Text</span>Nova variável mágica [IDTicket]: ao expandir o atalho dentro de um ticket aberto, é substituída pelo ID numérico do ticket atual. Permite montar links livremente (ex: suporte.php#edit/[IDTicket] para encaminhar a um colega, tickets.php#/edit/[IDTicket] para o cliente).</li>
+                <li><span class="tag-mod">Configurações &gt; Short Text &gt; Atalhos</span>Card &#39;Variáveis Mágicas&#39; lateral: nova categoria &#39;Apenas no Tickets&#39; (com [IDTicket]) e reordenação dos cards para &#39;Em todos os lugares&#39; &gt; &#39;Apenas no Tickets&#39; &gt; &#39;Apenas no Chat&#39;.</li>
+                <li><span class="tag-mod">Configurações &gt; Short Text</span>Correção: card &#39;Modo de Disparo dos Atalhos&#39; não corta mais as opções (Inteligente, Automático, Manual) por causa do limite de altura do container.</li>
+            </ul>
+        </section>
+
+        <footer class="site-footer">
+            Desenvolvido por <a href="https://setradev.com" target="_blank" rel="noopener">Setra Dev</a> · <a href="../">Todas as versões</a>
+        </footer>
+
+    </main>
+</body>
+</html>
